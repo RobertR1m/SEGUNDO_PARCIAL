@@ -1,3 +1,7 @@
+<?php
+require_once '../lib/conexion.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +14,7 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-8 offset-2">
-                <form action="insertar.php" method="POST">
+                <form action="actions/insertar.php" method="POST">
                     <div class="form-group">
                         <label for="nombre" class="form-label">Nombre</label>
                         <input type="text" name= "nombre" id="nombre" class="form-control">
