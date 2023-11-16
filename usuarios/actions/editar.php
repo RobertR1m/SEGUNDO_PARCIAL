@@ -7,8 +7,8 @@ if (!isset($_POST['register'])){
 }
 
 require_once '../../lib/conexion.php';
-$query = "INSERT INTO usuarios (name, email, password, phone, addres, city, state) VALUES 
-('$nombre','$correo','$pass','$telefono','$direccion','$ciudad','$estado')";
+$query = "UPDATE usuarios SET name = '$nombre', email = '$correo', password = '$pass', phone = '$telefono', addres = '$direccion',
+city = '$ciudad', state = '$estado' WHERE id = $id";
 
 mysqli_query ($conexion, $query);
 header("Location: ../");
